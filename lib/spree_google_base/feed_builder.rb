@@ -94,7 +94,7 @@ module SpreeGoogleBase
 
     def build_product(xml, product)
       xml.item do
-        xml.tag!('link', "http://www.paperfly.co.uk" + product.permalink)
+        xml.tag!('link', "http://www.paperfly.co.uk/products/" + product.permalink)
         build_images(xml, product)
 
         GOOGLE_BASE_ATTR_MAP.each do |k, v|
