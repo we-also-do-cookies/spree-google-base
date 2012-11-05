@@ -71,7 +71,7 @@ module SpreeGoogleBase
           build_meta(xml)
 
           ar_scope.find_each(:batch_size => 300) do |product|
-            build_product(xml, product) if product.is_active?
+            build_product(xml, product)
           end
         end
       end
